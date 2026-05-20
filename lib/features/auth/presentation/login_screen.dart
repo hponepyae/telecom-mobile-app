@@ -172,8 +172,6 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 14),
-                        _DemoHint(),
                         const SizedBox(height: 18),
                         Center(
                           child: Text(
@@ -549,58 +547,6 @@ class _OtpButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(32),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class _DemoHint extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
-      decoration: BoxDecoration(
-        color: AppColors.primarySoft,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Icon(Icons.info_outline_rounded,
-              size: 16, color: AppColors.primary),
-          const SizedBox(width: 8),
-          Expanded(
-            child: RichText(
-              text: const TextSpan(
-                style: TextStyle(
-                  fontFamily: 'Geist',
-                  fontSize: 11.5,
-                  color: AppColors.textSecondary,
-                  height: 1.4,
-                ),
-                children: [
-                  TextSpan(text: 'Demo · use '),
-                  TextSpan(
-                    text: 'customer@telecom.com',
-                    style: TextStyle(
-                      color: AppColors.primary,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  TextSpan(text: ' or '),
-                  TextSpan(
-                    text: 'technician@telecom.com',
-                    style: TextStyle(
-                      color: AppColors.primary,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  TextSpan(text: ' (any password).'),
-                ],
-              ),
-            ),
-          ),
-        ],
       ),
     );
   }
